@@ -7,4 +7,3 @@ import handleVideoSearch from '../actions/search.js';
 
 export default store = createStore(rootReducer,  applyMiddleware(thunk));
 
-//store.dispatch(handleVideoSearch);
