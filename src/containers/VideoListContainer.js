@@ -9,7 +9,7 @@ import changeVideo from './../actions/currentVideo.js';
 
 const mapStateToProps = state => {
   return {
-    videos: state.videos
+    videos: state.videoList
   }
 }
 

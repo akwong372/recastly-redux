@@ -4,6 +4,6 @@ import rootReducer from './../reducers/main.js';
 import handleVideoSearch from '../actions/search.js';
 
 // TODO:  Create your redux store, apply thunk as a middleware, and export it!
-
-export default store = createStore(rootReducer,  applyMiddleware(thunk));
+const store = createStore(rootReducer,  applyMiddleware(thunk));
+export default store;
 
