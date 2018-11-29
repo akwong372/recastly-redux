@@ -16,31 +16,32 @@ export default class App extends React.Component {
 
     this.state = {
       videos: [],
-      currentVideo: {}
+      currentVideo: null
     };
-  }
-
-  componentDidMount() {
-    this.getYouTubeVideos('react tutorials');
   }
 
   handleVideoListEntryTitleClick(video) {
     this.setState({currentVideo: video});
   }
-
+  
   getYouTubeVideos(query) {
     var options = {
       key: this.props.API_KEY,
       query: query
     };
-
     this.props.searchYouTube(options, (videos) =>
-      this.setState({
-        videos: videos,
-        currentVideo: videos[0]
-      })
-    );
-  }
+    this.setState({
+      videos: videos,
+      currentVideo: videos[0]
+    })
+  );
+
+}
+
+componentWillMount() {
+  this.getYouTubeVideos('react tutorials');
+}
+
 
   //TODO: swap out the React components below for the container components
   //  you wrote in the 'containers' directory.
