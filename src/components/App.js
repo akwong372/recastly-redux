@@ -39,7 +39,8 @@ export default class App extends React.Component {
 }
 
 componentWillMount() {
-  this.getYouTubeVideos('react tutorials');
+  store.dispatch(changeVideoList(exampleVideoData))
+  store.dispatch(changeVideo(exampleVideoData[0]))
 }
 
 
